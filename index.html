@@ -19,6 +19,8 @@
       <li><a href="#about" class="nav-link" data-section="about">À propos</a></li>
       <li><a href="#projects" class="nav-link" data-section="projects">Projets</a></li>
       <li><a href="#stages" class="nav-link" data-section="stages">Stages</a></li>
+      <li><a href="#synthese" class="nav-link" data-section="synthese">Synthèse</a></li>
+      <li><a href="#veille" class="nav-link" data-section="veille">Veille</a></li>
       <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -33,6 +35,8 @@
       <li><a href="#about" class="mobile-link">À propos</a></li>
       <li><a href="#projects" class="mobile-link">Projets</a></li>
       <li><a href="#stages" class="mobile-link">Stages</a></li>
+      <li><a href="#synthese" class="mobile-link">Synthèse</a></li>
+      <li><a href="#veille" class="mobile-link">Veille</a></li>
       <li><a href="#contact" class="mobile-link">Contact</a></li>
     </ul>
   </div>
@@ -40,12 +44,7 @@
   <!-- HERO -->
   <section id="accueil" class="hero">
     <div class="hero-bg-pattern"></div>
-    <div class="hero-content">
-      <div class="hero-photo-wrap">
-        <div class="hero-photo-placeholder">
-          <span>Photo</span>
-        </div>
-      </div>
+    <div class="hero-content hero-content-nophoto">
       <div class="hero-text">
         <p class="hero-eyebrow fade-in delay-1">Développeuse Web · BTS SIO SLAM</p>
         <h1 class="hero-name fade-in delay-2">Betül<br /><em>KOCAK</em></h1>
@@ -69,7 +68,7 @@
   <section id="about" class="section about-section">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="section-label">01 — About</span>
+        <span class="section-label">01 About</span>
         <h2 class="section-title">À propos de moi</h2>
       </div>
       <div class="about-grid">
@@ -84,7 +83,7 @@
             Curieuse et rigoureuse, j'explore en ce moment le back-end PHP/SQL et les bonnes pratiques de sécurité web.
           </p>
           <div class="about-actions">
-            <a href="assets/CV_Betul_KOCAK.pdf" download class="btn btn-primary">
+            <a href="assets/CV_Betul_KOCAK.jpg" download class="btn btn-primary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Télécharger le CV
             </a>
@@ -102,7 +101,7 @@
             </div>
           </div>
           <div class="skills-block">
-            <h3 class="skills-category">Back-end & BDD</h3>
+            <h3 class="skills-category">Back-end &amp; BDD</h3>
             <div class="skills-tags">
               <span class="tag">PHP</span>
               <span class="tag">SQL</span>
@@ -111,7 +110,7 @@
             </div>
           </div>
           <div class="skills-block">
-            <h3 class="skills-category">Outils & Réseau</h3>
+            <h3 class="skills-category">Outils &amp; Réseau</h3>
             <div class="skills-tags">
               <span class="tag">Git / GitHub</span>
               <span class="tag">Linux</span>
@@ -125,9 +124,9 @@
           <div class="skills-block">
             <h3 class="skills-category">Langues</h3>
             <div class="skills-tags">
-              <span class="tag">Français — Natif</span>
-              <span class="tag">Anglais — Courant</span>
-              <span class="tag">Allemand — Notions</span>
+              <span class="tag">Français – Natif</span>
+              <span class="tag">Anglais – Courant</span>
+              <span class="tag">Allemand – Notions</span>
             </div>
           </div>
         </div>
@@ -139,15 +138,15 @@
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">2024 — 2026</div>
+            <div class="timeline-date">2024 – 2026</div>
             <div class="timeline-body">
-              <strong>BTS SIO — Option SLAM</strong>
+              <strong>BTS SIO – Option SLAM</strong>
               <span>Lycée Camille Sée · Colmar</span>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">2022 — 2023</div>
+            <div class="timeline-date">2022 – 2023</div>
             <div class="timeline-body">
               <strong>Licence LEA</strong>
               <span>Université de Strasbourg</span>
@@ -155,7 +154,7 @@
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">2021 — 2022</div>
+            <div class="timeline-date">2021 – 2022</div>
             <div class="timeline-body">
               <strong>Baccalauréat Général</strong>
               <span>Lycée Camille Sée · Colmar</span>
@@ -170,21 +169,108 @@
   <section id="projects" class="section projects-section">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="section-label">02 — Projets</span>
+        <span class="section-label">02 Projets</span>
         <h2 class="section-title">Projets de cours</h2>
         <p class="section-subtitle">Travaux réalisés en formation BTS SIO</p>
       </div>
 
       <div class="cards-grid">
 
-        <!-- Projet 1 -->
-        <div class="project-card fade-up" onclick="openModal('modal-p1')">
+        <!-- Projet GestStages -->
+        <div class="project-card fade-up">
           <div class="card-img-wrap">
             <div class="card-img-placeholder">
               <span>Capture d'écran</span>
             </div>
-            <div class="card-overlay">
-              <span>Voir le détail →</span>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-sm">PHP</span>
+              <span class="tag tag-sm">SQL</span>
+              <span class="tag tag-sm">Apache</span>
+              <span class="tag tag-sm">Linux</span>
+            </div>
+            <h3 class="card-title">GestStages</h3>
+            <p class="card-desc">Déploiement d'une application web de gestion de stages en environnement de préproduction : virtualisation Debian, serveurs Apache/MariaDB, DNS et portail client PHP/SQL.</p>
+            <div class="card-footer">
+              <button class="btn btn-primary btn-sm" onclick="openModal('modal-p-geststages')">Agrandir</button>
+              <a href="#" class="card-link" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet Transcité -->
+        <div class="project-card fade-up delay-1">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder">
+              <span>Capture d'écran</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-sm">PHP</span>
+              <span class="tag tag-sm">SQL</span>
+              <span class="tag tag-sm">HTML/CSS</span>
+            </div>
+            <h3 class="card-title">AP Transcité</h3>
+            <p class="card-desc">Application web multi-pages connectée à une base de données de réseau de transport urbain : gestion des lignes, stations, satisfaction usagers et ajout de commentaires.</p>
+            <div class="card-footer">
+              <button class="btn btn-primary btn-sm" onclick="openModal('modal-p-transcite')">Agrandir</button>
+              <a href="#" class="card-link" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet Syndic LST -->
+        <div class="project-card fade-up delay-2">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder">
+              <span>Capture d'écran</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-sm">SQL</span>
+              <span class="tag tag-sm">MCD/MLD</span>
+              <span class="tag tag-sm">Merise</span>
+            </div>
+            <h3 class="card-title">Syndic LST</h3>
+            <p class="card-desc">Modélisation d'une base de données pour un syndic de copropriété : dictionnaire de données, MCD, calcul de quote-parts et cahier des charges du portail copropriétaire EasyCop.</p>
+            <div class="card-footer">
+              <button class="btn btn-primary btn-sm" onclick="openModal('modal-p-syndic')">Agrandir</button>
+              <a href="#" class="card-link" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet AP Triathlon -->
+        <div class="project-card fade-up delay-3">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder">
+              <span>Capture d'écran</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-sm">C#</span>
+              <span class="tag tag-sm">.NET</span>
+              <span class="tag tag-sm">SQL Server</span>
+              <span class="tag tag-sm">MVC</span>
+            </div>
+            <h3 class="card-title">AP Triathlon – GestTriathlon</h3>
+            <p class="card-desc">Application lourde C#/.NET de gestion de triathlons : inscriptions, résultats, contrôles antidopage. Architecture MVC, couche DAL, Git collaboratif.</p>
+            <div class="card-footer">
+              <button class="btn btn-primary btn-sm" onclick="openModal('modal-p-triathlon')">Agrandir</button>
+              <a href="#" class="card-link" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet Spéléo -->
+        <div class="project-card fade-up">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder">
+              <span>Capture d'écran</span>
             </div>
           </div>
           <div class="card-body">
@@ -192,56 +278,32 @@
               <span class="tag tag-sm">HTML/CSS</span>
               <span class="tag tag-sm">JavaScript</span>
             </div>
-            <h3 class="card-title">[Nom du projet]</h3>
-            <p class="card-desc">Courte description du projet — ce qu'il fait, pourquoi, pour qui.</p>
+            <h3 class="card-title">Site Spéléo-club de Chauvigny</h3>
+            <p class="card-desc">Création d'un site vitrine pour un club de spéléologie : présentation des activités, galerie, formulaire de contact. Conception graphique et intégration responsive.</p>
             <div class="card-footer">
-              <a href="#" class="card-link" onclick="event.stopPropagation()">GitHub →</a>
+              <button class="btn btn-primary btn-sm" onclick="openModal('modal-p-speleo')">Agrandir</button>
+              <a href="#" class="card-link" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
 
-        <!-- Projet 2 -->
-        <div class="project-card fade-up delay-1" onclick="openModal('modal-p2')">
+        <!-- Projet AP Immo -->
+        <div class="project-card fade-up delay-1">
           <div class="card-img-wrap">
             <div class="card-img-placeholder">
               <span>Capture d'écran</span>
             </div>
-            <div class="card-overlay">
-              <span>Voir le détail →</span>
-            </div>
           </div>
           <div class="card-body">
             <div class="card-tags">
-              <span class="tag tag-sm">PHP</span>
               <span class="tag tag-sm">SQL</span>
+              <span class="tag tag-sm">MCD/MLD</span>
             </div>
-            <h3 class="card-title">[Nom du projet]</h3>
-            <p class="card-desc">Courte description du projet — ce qu'il fait, pourquoi, pour qui.</p>
+            <h3 class="card-title">AP Immo – Base de données</h3>
+            <p class="card-desc">Conception et création d'une base de données immobilière : modélisation, scripts SQL, requêtes de gestion des biens, agences et transactions.</p>
             <div class="card-footer">
-              <a href="#" class="card-link" onclick="event.stopPropagation()">GitHub →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projet 3 -->
-        <div class="project-card fade-up delay-2" onclick="openModal('modal-p3')">
-          <div class="card-img-wrap">
-            <div class="card-img-placeholder">
-              <span>Capture d'écran</span>
-            </div>
-            <div class="card-overlay">
-              <span>Voir le détail →</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-tags">
-              <span class="tag tag-sm">C#</span>
-              <span class="tag tag-sm">[Placeholder]</span>
-            </div>
-            <h3 class="card-title">[Nom du projet]</h3>
-            <p class="card-desc">Courte description du projet — ce qu'il fait, pourquoi, pour qui.</p>
-            <div class="card-footer">
-              <a href="#" class="card-link" onclick="event.stopPropagation()">GitHub →</a>
+              <button class="btn btn-primary btn-sm" onclick="openModal('modal-p-immo')">Agrandir</button>
+              <a href="#" class="card-link" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
@@ -254,14 +316,14 @@
   <section id="stages" class="section stages-section">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="section-label">03 — Expériences</span>
+        <span class="section-label">03 Expériences</span>
         <h2 class="section-title">Stages</h2>
-        <p class="section-subtitle">Missions en entreprise — BTS SIO</p>
+        <p class="section-subtitle">Missions en entreprise – BTS SIO</p>
       </div>
 
       <div class="stages-list">
 
-        <!-- Stage 2 (le plus récent en premier) -->
+        <!-- Stage 2 -->
         <div class="stage-card fade-up" onclick="openModal('modal-s2')">
           <div class="stage-card-left">
             <div class="stage-img-placeholder">
@@ -270,13 +332,13 @@
           </div>
           <div class="stage-card-right">
             <div class="stage-meta">
-              <span class="stage-date">Mars — Juin 2026 · 6 semaines</span>
+              <span class="stage-date">Mars – Juin 2026 · 6 semaines</span>
               <span class="stage-badge">2e année</span>
             </div>
-            <h3 class="stage-title">Bois & Façade — Colmar</h3>
+            <h3 class="stage-title">Bois &amp; Façade – Colmar</h3>
             <p class="stage-role">Développeuse Web · Création d'un site vitrine &amp; portail partenaire</p>
             <p class="stage-desc">
-              Développement d'un site vitrine HTML/CSS et d'un portail client dynamique PHP/SQL permettant le suivi en temps réel de l'avancement des chantiers.
+              Développement d'un site vitrine HTML/CSS et d'un portail client dynamique PHP/SQL permettant le suivi en temps réel de l'avancement des chantiers. Conception du cahier des charges, intégration responsive, tests de sécurité.
             </p>
             <div class="stage-tags">
               <span class="tag tag-sm">HTML/CSS</span>
@@ -284,7 +346,13 @@
               <span class="tag tag-sm">SQL</span>
               <span class="tag tag-sm">Responsive</span>
             </div>
-            <button class="btn-text">Lire le compte rendu →</button>
+            <div class="stage-actions" onclick="event.stopPropagation()">
+              <button class="btn-text" onclick="openModal('modal-s2')">Lire le compte rendu</button>
+              <a href="assets/rapport_stage2_KOCAK.docx" download class="btn btn-ghost btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Rapport
+              </a>
+            </div>
           </div>
         </div>
 
@@ -297,13 +365,13 @@
           </div>
           <div class="stage-card-right">
             <div class="stage-meta">
-              <span class="stage-date">Mai — Juin 2025 · 5 semaines</span>
+              <span class="stage-date">Mai – Juin 2025 · 5 semaines</span>
               <span class="stage-badge">1re année</span>
             </div>
-            <h3 class="stage-title">Le Bien-Être Holistique — Turckheim</h3>
+            <h3 class="stage-title">Le Bien-Être Holistique – Turckheim</h3>
             <p class="stage-role">Développeuse Web · Site vitrine &amp; présence numérique</p>
             <p class="stage-desc">
-              Création d'un site vitrine HTML/CSS pour un cabinet de soins indépendant, refonte de la présence en ligne (SEO, réseaux sociaux, Google My Business).
+              Création d'un site vitrine HTML/CSS pour un cabinet de soins indépendant, refonte complète de la présence en ligne : nouveau site <em>Le Pouvoir des Mains</em>, gestion Jimdo, optimisation SEO, Google Maps, QR code, animation des réseaux sociaux.
             </p>
             <div class="stage-tags">
               <span class="tag tag-sm">HTML/CSS</span>
@@ -311,10 +379,159 @@
               <span class="tag tag-sm">SEO</span>
               <span class="tag tag-sm">Google Maps</span>
             </div>
-            <button class="btn-text">Lire le compte rendu →</button>
+            <div class="stage-actions" onclick="event.stopPropagation()">
+              <button class="btn-text" onclick="openModal('modal-s1')">Lire le compte rendu</button>
+              <a href="assets/rapport_stage1_KOCAK.docx" download class="btn btn-ghost btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Rapport
+              </a>
+            </div>
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- TABLEAU DE SYNTHÈSE -->
+  <section id="synthese" class="section synthese-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">04 Bilan</span>
+        <h2 class="section-title">Tableau de synthèse</h2>
+        <p class="section-subtitle">Réalisations professionnelles – BTS SIO SLAM · Session 2025</p>
+      </div>
+      <div class="synthese-wrap fade-up">
+        <div class="synthese-intro">
+          <p>Ce tableau recense l'ensemble des compétences mobilisées lors des réalisations en formation et en milieu professionnel, conformément au référentiel BTS SIO.</p>
+          <div class="synthese-actions">
+            <button class="btn btn-primary" onclick="openSynthese()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              Voir le tableau complet
+            </button>
+            <a href="assets/tableau_synthese_KOCAK.jpg" download class="btn btn-ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Télécharger
+            </a>
+          </div>
+        </div>
+        <div class="synthese-preview">
+          <div class="synthese-competences">
+            <div class="comp-col">
+              <div class="comp-block">
+                <h4>Gérer le patrimoine informatique</h4>
+                <p>Adressage IP, VLAN, DNS, configuration réseau multi-sites, VirtualBox</p>
+              </div>
+              <div class="comp-block">
+                <h4>Répondre aux incidents</h4>
+                <p>Déploiement applicatif, tests de fonctionnement, corrections de bugs</p>
+              </div>
+            </div>
+            <div class="comp-col">
+              <div class="comp-block">
+                <h4>Développer la présence en ligne</h4>
+                <p>Sites vitrines, référencement SEO, réseaux sociaux, Google My Business</p>
+              </div>
+              <div class="comp-block">
+                <h4>Travailler en mode projet</h4>
+                <p>Cahier des charges, Git, planification, collaboration SLAM/SISR</p>
+              </div>
+            </div>
+            <div class="comp-col">
+              <div class="comp-block">
+                <h4>Mettre à disposition un service informatique</h4>
+                <p>Portail partenaire PHP/SQL, application GestTriathlon C#, déploiement Apache</p>
+              </div>
+              <div class="comp-block">
+                <h4>Organiser son développement professionnel</h4>
+                <p>Veille technologique, portfolio, apprentissage autonome</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VEILLE TECHNOLOGIQUE -->
+  <section id="veille" class="section veille-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">05 Veille</span>
+        <h2 class="section-title">Veille technologique</h2>
+        <p class="section-subtitle">Les tablettes de dessin numériques</p>
+      </div>
+      <div class="veille-grid fade-up">
+        <div class="veille-main">
+          <div class="veille-tag-row">
+            <span class="tag tag-sm">iPad</span>
+            <span class="tag tag-sm">Apple Pencil</span>
+            <span class="tag tag-sm">Procreate</span>
+            <span class="tag tag-sm">Développement iOS</span>
+          </div>
+          <p class="veille-intro">
+            Ma veille porte sur l'évolution des tablettes de dessin numérique, en particulier les iPads, analysées sous l'angle du développement informatique : technologies matérielles, algorithmes de gestion du stylet et écosystème applicatif.
+          </p>
+          <div class="veille-slides">
+            <div class="veille-slide-item">
+              <div class="veille-slide-num">01</div>
+              <div>
+                <strong>Introduction</strong>
+                <p>Les iPads et tablettes de dessin : portabilité, précision et performances pour les artistes numériques. Focus sur les technologies sous-jacentes vues par une étudiante en BTS SIO.</p>
+              </div>
+            </div>
+            <div class="veille-slide-item">
+              <div class="veille-slide-num">02</div>
+              <div>
+                <strong>L'essor des tablettes</strong>
+                <p>iPad, Samsung Galaxy Tab, Surface Pro : comparatif de l'offre du marché et analyse de la croissance du secteur (source Business Research Insights, Statista).</p>
+              </div>
+            </div>
+            <div class="veille-slide-item">
+              <div class="veille-slide-num">03</div>
+              <div>
+                <strong>Technologies sous-jacentes</strong>
+                <p>Processeur M1, écran Retina, Apple Pencil : algorithmes de gestion de la pression et de l'inclinaison, latence minimale, rendu en temps réel.</p>
+              </div>
+            </div>
+            <div class="veille-slide-item">
+              <div class="veille-slide-num">04</div>
+              <div>
+                <strong>Applications de dessin</strong>
+                <p>Procreate, Photoshop, Paint Tool Sai : intégration matériel-logiciel et algorithmes de rendu des couches et des effets de pinceau.</p>
+              </div>
+            </div>
+            <div class="veille-slide-item">
+              <div class="veille-slide-num">05</div>
+              <div>
+                <strong>Impact sur le marché</strong>
+                <p>Analyse des données de marché et de l'adoption en France. L'informatique omniprésente dans des domaines créatifs, un enjeu pour les développeurs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="veille-sources">
+            <span class="veille-source-label">Sources</span>
+            <span>businessresearchinsights.com · statista.com · feedly.com · Google Alerts</span>
+          </div>
+        </div>
+        <div class="veille-aside">
+          <div class="veille-presentation-card">
+            <div class="veille-pres-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h4>Présentation complète</h4>
+            <p>Diaporama de 10 diapositives présenté oralement en classe.</p>
+            <a href="assets/MaVeilleTechnologique_BetulKOCAK.pptx" download class="btn btn-primary" style="width:100%;justify-content:center;margin-top:0.75rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Télécharger le diaporama
+            </a>
+          </div>
+          <div class="veille-quote">
+            <blockquote>
+              "L'informatique est omniprésente dans tous les domaines, même dans ceux qui semblent éloignés des considérations techniques."
+            </blockquote>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -323,7 +540,7 @@
   <section id="contact" class="section contact-section">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="section-label">04 — Contact</span>
+        <span class="section-label">06 Contact</span>
         <h2 class="section-title">Me contacter</h2>
         <p class="section-subtitle">Une question, une opportunité ? Écrivez-moi.</p>
       </div>
@@ -397,49 +614,120 @@
     </div>
   </footer>
 
+  <!-- MODAL SYNTHESE (lightbox image) -->
+  <div class="modal-overlay" id="modal-synthese" onclick="closeModal(event, 'modal-synthese')">
+    <div class="modal-box modal-box-xl">
+      <button class="modal-close" onclick="closeModal(null, 'modal-synthese')">✕</button>
+      <div class="modal-content" style="padding:1rem;">
+        <h2 class="modal-title" style="margin-bottom:1rem;">Tableau de synthèse des réalisations</h2>
+        <img src="assets/tableau_synthese_KOCAK.jpg" alt="Tableau de synthèse BTS SIO SLAM – KOCAK Betül" style="width:100%;border-radius:8px;display:block;" />
+        <div style="margin-top:1rem;display:flex;gap:1rem;">
+          <a href="assets/tableau_synthese_KOCAK.jpg" download class="btn btn-primary">Télécharger</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- MODALS PROJETS -->
-  <div class="modal-overlay" id="modal-p1" onclick="closeModal(event, 'modal-p1')">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal(null, 'modal-p1')">✕</button>
+  <div class="modal-overlay" id="modal-p-geststages" onclick="closeModal(event, 'modal-p-geststages')">
+    <div class="modal-box modal-box-lg">
+      <button class="modal-close" onclick="closeModal(null, 'modal-p-geststages')">✕</button>
       <div class="modal-img-placeholder"><span>Captures d'écran du projet</span></div>
       <div class="modal-content">
         <div class="modal-tags">
-          <span class="tag tag-sm">HTML/CSS</span>
-          <span class="tag tag-sm">JavaScript</span>
+          <span class="tag tag-sm">PHP</span><span class="tag tag-sm">SQL</span><span class="tag tag-sm">Apache</span><span class="tag tag-sm">Debian</span><span class="tag tag-sm">Linux</span>
         </div>
-        <h2 class="modal-title">[Nom du projet]</h2>
-        <p class="modal-desc">Description détaillée du projet : contexte, objectifs, fonctionnalités développées, difficultés rencontrées et solutions apportées. Placeholder à compléter.</p>
+        <h2 class="modal-title">GestStages</h2>
+        <p class="modal-subtitle">Déploiement d'une application web en environnement de préproduction</p>
+        <p class="modal-desc">Réalisé en binôme (SLAM + SISR), ce TP consistait à déployer une application PHP/SQL de gestion de stages sur une infrastructure virtualisée Debian, avec deux serveurs spécialisés (SRV-WEB et SRV-BDD) configurés manuellement.</p>
+        <p class="modal-desc"><strong>Mission SLAM :</strong> déploiement de l'application via SSH/SCP, importation du script SQL, création de l'utilisateur base de données, ajout du fichier de diagnostic PHP, gestion des droits (groupe dev, permissions 775).</p>
+        <p class="modal-desc"><strong>Outils :</strong> VirtualBox, Debian, Apache2, PHP, MariaDB, SSH, SCP.</p>
         <a href="#" class="btn btn-primary" target="_blank">Voir sur GitHub</a>
       </div>
     </div>
   </div>
 
-  <div class="modal-overlay" id="modal-p2" onclick="closeModal(event, 'modal-p2')">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal(null, 'modal-p2')">✕</button>
+  <div class="modal-overlay" id="modal-p-transcite" onclick="closeModal(event, 'modal-p-transcite')">
+    <div class="modal-box modal-box-lg">
+      <button class="modal-close" onclick="closeModal(null, 'modal-p-transcite')">✕</button>
       <div class="modal-img-placeholder"><span>Captures d'écran du projet</span></div>
       <div class="modal-content">
         <div class="modal-tags">
-          <span class="tag tag-sm">PHP</span>
-          <span class="tag tag-sm">SQL</span>
+          <span class="tag tag-sm">PHP</span><span class="tag tag-sm">SQL</span><span class="tag tag-sm">HTML/CSS</span><span class="tag tag-sm">WAMP</span>
         </div>
-        <h2 class="modal-title">[Nom du projet]</h2>
-        <p class="modal-desc">Description détaillée du projet. Placeholder à compléter.</p>
+        <h2 class="modal-title">AP Transcité</h2>
+        <p class="modal-subtitle">Application web de gestion d'un réseau de transport urbain</p>
+        <p class="modal-desc">Création d'une application web multi-pages connectée à une base de données de réseau de bus. Le projet couvre la modélisation (Looping), l'initialisation des données, l'exploitation par requêtes SQL et le développement de 6 pages PHP dynamiques.</p>
+        <p class="modal-desc"><strong>Fonctionnalités :</strong> liste des lignes, stations par ligne, guichets automatiques manquants, statistiques de satisfaction par critère, formulaire d'ajout de commentaire.</p>
+        <p class="modal-desc"><strong>Outils :</strong> WAMP, PHP, SQL, HTML/CSS, Looping.</p>
         <a href="#" class="btn btn-primary" target="_blank">Voir sur GitHub</a>
       </div>
     </div>
   </div>
 
-  <div class="modal-overlay" id="modal-p3" onclick="closeModal(event, 'modal-p3')">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal(null, 'modal-p3')">✕</button>
+  <div class="modal-overlay" id="modal-p-syndic" onclick="closeModal(event, 'modal-p-syndic')">
+    <div class="modal-box modal-box-lg">
+      <button class="modal-close" onclick="closeModal(null, 'modal-p-syndic')">✕</button>
       <div class="modal-img-placeholder"><span>Captures d'écran du projet</span></div>
       <div class="modal-content">
         <div class="modal-tags">
-          <span class="tag tag-sm">C#</span>
+          <span class="tag tag-sm">SQL</span><span class="tag tag-sm">MCD/MLD</span><span class="tag tag-sm">Merise</span><span class="tag tag-sm">Analyse</span>
         </div>
-        <h2 class="modal-title">[Nom du projet]</h2>
-        <p class="modal-desc">Description détaillée du projet. Placeholder à compléter.</p>
+        <h2 class="modal-title">Syndic LST</h2>
+        <p class="modal-subtitle">Modélisation d'une base de données de gestion de copropriété</p>
+        <p class="modal-desc">Projet d'analyse et de modélisation pour un syndic de copropriété : dictionnaire de données (Lot, Copropriétaire, Devis, Prestataire…), conception du MCD, calcul des quotes-parts par tantièmes.</p>
+        <p class="modal-desc"><strong>Mission C :</strong> rédaction du cahier des charges du portail copropriétaire EasyCop permettant la simulation de quote-part, la consultation des devis votés et les appels de fonds.</p>
+        <a href="#" class="btn btn-primary" target="_blank">Voir sur GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-p-triathlon" onclick="closeModal(event, 'modal-p-triathlon')">
+    <div class="modal-box modal-box-lg">
+      <button class="modal-close" onclick="closeModal(null, 'modal-p-triathlon')">✕</button>
+      <div class="modal-img-placeholder"><span>Captures d'écran du projet</span></div>
+      <div class="modal-content">
+        <div class="modal-tags">
+          <span class="tag tag-sm">C#</span><span class="tag tag-sm">.NET</span><span class="tag tag-sm">SQL Server</span><span class="tag tag-sm">MVC</span><span class="tag tag-sm">Git</span>
+        </div>
+        <h2 class="modal-title">AP Triathlon – GestTriathlon</h2>
+        <p class="modal-subtitle">Application lourde C#/.NET de gestion de compétitions</p>
+        <p class="modal-desc">Application Windows développée en équipe pour le Comité Départemental de Triathlon. Gestion des triathlons, triathlètes, inscriptions, résultats et contrôles antidopage. Architecture MVC avec couche DAL, accès SQL Server via VPN/TSE.</p>
+        <p class="modal-desc"><strong>Fonctionnalités :</strong> formulaires CRUD multicritères, gestion des épreuves (nage, vélo, course), alertes dopage, classements, résultats en temps réel.</p>
+        <p class="modal-desc"><strong>Méthode :</strong> travail collaboratif en groupe de 3-4, dépôt Git avec branches par développeur, chef de projet désigné.</p>
+        <a href="#" class="btn btn-primary" target="_blank">Voir sur GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-p-speleo" onclick="closeModal(event, 'modal-p-speleo')">
+    <div class="modal-box modal-box-lg">
+      <button class="modal-close" onclick="closeModal(null, 'modal-p-speleo')">✕</button>
+      <div class="modal-img-placeholder"><span>Captures d'écran du projet</span></div>
+      <div class="modal-content">
+        <div class="modal-tags">
+          <span class="tag tag-sm">HTML/CSS</span><span class="tag tag-sm">JavaScript</span>
+        </div>
+        <h2 class="modal-title">Site Spéléo-club de Chauvigny</h2>
+        <p class="modal-subtitle">Site vitrine responsive pour un club sportif</p>
+        <p class="modal-desc">Création d'un site vitrine complet pour le Spéléo-club de Chauvigny : présentation du club et des activités, galerie photos, formulaire de contact, navigation claire et design adapté au public cible.</p>
+        <p class="modal-desc"><strong>Compétences :</strong> intégration HTML/CSS, responsive design, accessibilité, UX.</p>
+        <a href="#" class="btn btn-primary" target="_blank">Voir sur GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-p-immo" onclick="closeModal(event, 'modal-p-immo')">
+    <div class="modal-box modal-box-lg">
+      <button class="modal-close" onclick="closeModal(null, 'modal-p-immo')">✕</button>
+      <div class="modal-img-placeholder"><span>Captures d'écran du projet</span></div>
+      <div class="modal-content">
+        <div class="modal-tags">
+          <span class="tag tag-sm">SQL</span><span class="tag tag-sm">MCD/MLD</span><span class="tag tag-sm">Looping</span>
+        </div>
+        <h2 class="modal-title">AP Immo – Base de données</h2>
+        <p class="modal-subtitle">Conception et création d'une base de données immobilière</p>
+        <p class="modal-desc">Projet de modélisation d'une base de données pour une agence immobilière : identification des entités (biens, agences, transactions, clients), conception du MCD/MLD, génération du script SQL et requêtes de gestion.</p>
         <a href="#" class="btn btn-primary" target="_blank">Voir sur GitHub</a>
       </div>
     </div>
@@ -452,22 +740,15 @@
       <div class="modal-img-placeholder"><span>Captures d'écran du site réalisé</span></div>
       <div class="modal-content">
         <div class="modal-tags">
-          <span class="tag tag-sm">HTML/CSS</span>
-          <span class="tag tag-sm">Jimdo</span>
-          <span class="tag tag-sm">SEO</span>
+          <span class="tag tag-sm">HTML/CSS</span><span class="tag tag-sm">Jimdo</span><span class="tag tag-sm">SEO</span><span class="tag tag-sm">Google Maps</span>
         </div>
-        <p class="modal-meta">Mai — Juin 2025 · Turckheim · 5 semaines · 1re année BTS</p>
+        <p class="modal-meta">Mai – Juin 2025 · Turckheim · 5 semaines · 1re année BTS</p>
         <h2 class="modal-title">Le Bien-Être Holistique</h2>
-        <p class="modal-subtitle">Développeuse web — Présence numérique &amp; site vitrine</p>
-        <p class="modal-desc">
-          Cabinet de soins et massages dirigé par Mme Caroline GRUCKER, praticienne à Turckheim. Le premier site vitrine souffrait d'un faible référencement et d'une confusion avec les services de l'hôtel partenaire.
-        </p>
-        <p class="modal-desc">
-          <strong>Mission :</strong> Développement d'un nouveau site vitrine <em>Le Pouvoir des Mains</em> en HTML/CSS avec Visual Studio Code, intégrant un formulaire de contact, une carte Google Maps et un QR code. Gestion de la plateforme Jimdo existante et optimisation du référencement naturel. Animation des réseaux sociaux (Instagram, Facebook).
-        </p>
-        <p class="modal-desc">
-          <strong>Résultat :</strong> Site responsive déployé, présence en ligne différenciée, stratégie SEO mise en place.
-        </p>
+        <p class="modal-subtitle">Développeuse web – Présence numérique &amp; site vitrine</p>
+        <p class="modal-desc">Cabinet de soins et massages de Mme Caroline GRUCKER à Turckheim. L'activité reposait sur une visibilité insuffisante : le premier site souffrait d'un mauvais référencement et d'une confusion avec les services de l'hôtel partenaire.</p>
+        <p class="modal-desc"><strong>Mission :</strong> développement d'un nouveau site vitrine <em>Le Pouvoir des Mains</em> en HTML/CSS (VS Code) : navigation claire, formulaire de contact, Google Maps, QR code, design responsive fidèle à l'identité visuelle. Gestion en parallèle du site Jimdo existant et animation des réseaux sociaux (Instagram, Facebook).</p>
+        <p class="modal-desc"><strong>Résultat :</strong> site responsive déployé, présence en ligne différenciée, stratégie SEO mise en place, droits d'accès sécurisés.</p>
+        <a href="assets/rapport_stage1_KOCAK.docx" download class="btn btn-primary">Télécharger le rapport</a>
       </div>
     </div>
   </div>
@@ -478,23 +759,15 @@
       <div class="modal-img-placeholder"><span>Captures d'écran du portail et du site</span></div>
       <div class="modal-content">
         <div class="modal-tags">
-          <span class="tag tag-sm">HTML/CSS</span>
-          <span class="tag tag-sm">PHP</span>
-          <span class="tag tag-sm">SQL</span>
-          <span class="tag tag-sm">Responsive</span>
+          <span class="tag tag-sm">HTML/CSS</span><span class="tag tag-sm">PHP</span><span class="tag tag-sm">SQL</span><span class="tag tag-sm">Responsive</span>
         </div>
-        <p class="modal-meta">Mars — Juin 2026 · Colmar · 6 semaines · 2e année BTS</p>
-        <h2 class="modal-title">Bois & Façade</h2>
-        <p class="modal-subtitle">Développeuse web — Site vitrine &amp; portail partenaire</p>
-        <p class="modal-desc">
-          Entreprise de maçonnerie générale, gros œuvre et rénovation basée à Colmar. L'entreprise souhaitait moderniser sa présence numérique et mettre en place un outil de suivi de chantiers pour ses clients.
-        </p>
-        <p class="modal-desc">
-          <strong>Mission :</strong> Développement d'un site vitrine HTML/CSS professionnel présentant les services et les réalisations de l'entreprise. Création d'un portail partenaire dynamique en PHP/SQL permettant aux clients de consulter l'avancement de leurs travaux en temps réel et à l'entreprise de mettre à jour les informations.
-        </p>
-        <p class="modal-desc">
-          <strong>Résultat :</strong> Site vitrine et portail responsive déployés, communication client améliorée, transparence renforcée sur le suivi de chantier.
-        </p>
+        <p class="modal-meta">Mars – Juin 2026 · Colmar · 6 semaines · 2e année BTS</p>
+        <h2 class="modal-title">Bois &amp; Façade</h2>
+        <p class="modal-subtitle">Développeuse web – Site vitrine &amp; portail partenaire</p>
+        <p class="modal-desc">Entreprise de maçonnerie générale et rénovation basée à Colmar. Avant mon intervention, l'entreprise ne disposait ni d'un site structuré ni d'outils de suivi de chantier : la communication reposait uniquement sur téléphone et e-mail.</p>
+        <p class="modal-desc"><strong>Mission :</strong> conception d'un site vitrine HTML/CSS professionnel (services, réalisations, coordonnées) et développement d'un portail partenaire PHP/SQL permettant aux clients de suivre l'avancement de leurs travaux en temps réel. Adaptation responsive complète et tests de sécurité.</p>
+        <p class="modal-desc"><strong>Résultat :</strong> deux interfaces déployées et testées, communication client renforcée, transparence sur le suivi de chantier.</p>
+        <a href="assets/rapport_stage2_KOCAK.docx" download class="btn btn-primary">Télécharger le rapport</a>
       </div>
     </div>
   </div>
