@@ -66,11 +66,6 @@ function closeModal(event, id) {
   }
 }
 
-// Open synthese lightbox
-function openSynthese() {
-  openModal('modal-synthese');
-}
-
 // Close modals on Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {

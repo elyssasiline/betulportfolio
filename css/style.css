@@ -211,6 +211,7 @@ body {
   font-weight: 300;
   line-height: 1.05;
   color: var(--text);
+  margin-bottom: 1.25rem;
 }
 .hero-name em {
   font-style: italic;
@@ -310,7 +311,7 @@ body {
 .section:nth-child(even) { background: var(--sand); }
 .container { max-width: 1060px; margin: 0 auto; padding: 0 2rem; }
 
-.section-header { margin-bottom: 1.5rem; }
+.section-header { margin-bottom: 3.5rem; }
 .section-label {
   display: inline-block;
   font-size: 0.72rem;
@@ -516,8 +517,6 @@ body {
   background: var(--cream);
   border-radius: var(--radius-md);
   border: 1px solid var(--sand-dark);
-  display: grid;
-  grid-template-columns: 220px 1fr;
   overflow: hidden;
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
@@ -831,7 +830,7 @@ body {
 /* ===================================
    CARDS FOOTER AVEC BOUTON
 =================================== */
-.card-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.card-footer { display: flex; align-items: center; justify-content: flex-start; gap: 0.75rem; }
 .btn-sm { padding: 0.4rem 1rem; font-size: 0.78rem; }
 
 /* ===================================
