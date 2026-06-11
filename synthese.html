@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tableau de synthèse | Betül KOCAK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body { background: var(--sand); }
+
+    .synthese-page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+    }
+
+    /* Header bar */
+    .synth-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 0 2rem;
+      border-bottom: 1px solid var(--sand-dark);
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .synth-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.25s ease;
+    }
+    .synth-back:hover { color: var(--cognac); }
+    .synth-back svg { flex-shrink: 0; }
+    .synth-logo {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--brown);
+      letter-spacing: 0.08em;
+    }
+    .synth-actions { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+
+    /* Title block */
+    .synth-title-block { margin-bottom: 2rem; }
+    .synth-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cognac);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .synth-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.15;
+      margin-bottom: 0.4rem;
+    }
+    .synth-subtitle { font-size: 0.9rem; color: var(--muted); }
+
+    /* Image container */
+    .synth-img-wrap {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .synth-img-wrap img {
+      width: 100%;
+      display: block;
+    }
+    .synth-img-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--sand-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* Legend / competences recap */
+    .synth-legend {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .synth-comp {
+      background: var(--cream);
+      border: 1px solid var(--sand-dark);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+    }
+    .synth-comp-letter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px; height: 28px;
+      background: var(--cognac-dim);
+      color: var(--cognac);
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .synth-comp h4 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--brown);
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+    .synth-comp p {
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Note de bas de page */
+    .synth-note {
+      background: var(--cognac-dim);
+      border-left: 3px solid var(--cognac);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1rem 1.25rem;
+      font-size: 0.83rem;
+      color: var(--brown);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .synth-legend { grid-template-columns: 1fr 1fr; }
+      .synth-topbar { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .synth-legend { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="synthese-page">
+
+    <!-- Top bar -->
+    <div class="synth-topbar">
+      <a href="index.html#synthese" class="synth-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        Retour au portfolio
+      </a>
+      <span class="synth-logo">BK</span>
+      <div class="synth-actions">
+        <a href="assets/fichiers/Betul_Tableau.jpg" download class="btn btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Télécharger
+        </a>
+        <button onclick="window.print()" class="btn btn-ghost">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Imprimer
+        </button>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="synth-title-block">
+      <span class="synth-eyebrow">BTS SIO SLAM · Session 2025 · KOCAK Betül</span>
+      <h1 class="synth-h1">Tableau de synthèse<br /><em>des réalisations professionnelles</em></h1>
+      <p class="synth-subtitle">Bloc : Support et mise à disposition de services informatiques · Coefficient 4</p>
+    </div>
+
+    <!-- Tableau image -->
+    <div class="synth-img-wrap">
+      <img src="assets/fichiers/Betul_Tableau.jpg" alt="Tableau de synthèse BTS SIO SLAM – KOCAK Betül" />
+    </div>
+
+    <!-- Légende des compétences -->
+    <div class="synth-legend">
+      <div class="synth-comp">
+        <div class="synth-comp-letter">A</div>
+        <h4>Gérer le patrimoine informatique</h4>
+        <p>Ressources numériques, habilitations, continuité de service, sauvegardes, règles d'usage.</p>
+      </div>
+      <div class="synth-comp">
+        <div class="synth-comp-letter">B</div>
+        <h4>Répondre aux incidents et demandes</h4>
+        <p>Collecte, suivi, traitement des demandes réseau, système et applicatives.</p>
+      </div>
+      <div class="synth-comp">
+        <div class="synth-comp-letter">C</div>
+        <h4>Développer la présence en ligne</h4>
+        <p>Image de l'organisation, référencement, visibilité, évolution du site web.</p>
+      </div>
+      <div class="synth-comp">
+        <div class="synth-comp-letter">D</div>
+        <h4>Travailler en mode projet</h4>
+        <p>Analyse, planification, suivi des indicateurs, gestion des écarts.</p>
+      </div>
+      <div class="synth-comp">
+        <div class="synth-comp-letter">E</div>
+        <h4>Mettre à disposition un service informatique</h4>
+        <p>Tests d'intégration et d'acceptation, déploiement, accompagnement utilisateurs.</p>
+      </div>
+      <div class="synth-comp">
+        <div class="synth-comp-letter">F</div>
+        <h4>Organiser son développement professionnel</h4>
+        <p>Veille technologique, identité professionnelle, projet professionnel.</p>
+      </div>
+    </div>
+
+    <!-- Note -->
+    <p class="synth-note">
+      Ce tableau couvre l'ensemble des compétences du bloc E5, conformément au référentiel BTS SIO. Les réalisations en milieu professionnel ont été effectuées dans des environnements technologiques conformes à l'annexe II.E du diplôme. La couverture complète des compétences est vérifiable colonne par colonne.
+    </p>
+
+  </div>
+</body>
+</html>
